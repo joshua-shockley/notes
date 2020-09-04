@@ -1,0 +1,1 @@
+The file structure for this may start out very unorganized but will shortly gain some kind of tread as i find things to place into this RECORD of said experience
