@@ -14,9 +14,13 @@ PYTHON:
 
 
     To Start/Run the files...
-        need to setup the shell and make sure python3 is installed check for  python3 -v in the terminal after cd down to the directory holding the file you want to run... if it shows updated version then do "pipenv shell" into term and then you can just type "python3 (file name).py" and it runs the script.
+        need to setup the shell and make sure python3 is installed check for  python3 -v in the terminal after cd down to the directory holding the file you want to run... if it shows updated version then do "pipenv shell" into term and then you'll have to cd down into the particular directory before you can just type "python3 (file name).py" and it runs the script.
 
 
 C++:
     this is a new one for me so this may take a minute to get to run properly... errors from start. :(
+
+    still looking into what i need to get this part going.. it's not able to see the file correctly or something
+    It may be something to do with the empty task.json file but not sure yet.. well get it running at some point
+    
 

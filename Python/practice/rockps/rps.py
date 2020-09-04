@@ -6,12 +6,12 @@ wins = 0
 ties = 0
 losses = 0
 
-print("welcome to my version of ROCK, PAPER, SCISSORS! \n")
+print("\n\n\n\nwelcome to my version of ROCK, PAPER, SCISSORS! \n")
 time.sleep(1)
 user_name = input("what's your name...? ")
 # print("Wins: %s, Ties: %s, Losses: %s" % (wins, ties, losses))
 time.sleep(1)
-print("Please make a choice to coninue")
+print(f"Please make a choice to coninue, {user_name}")
 
 
 # now we initialize the choices
@@ -29,13 +29,13 @@ while not user == '9':
         print(f"\nThe Computer picked {computer}\n")
         time.sleep(2)
         if computer == 1:  # ties
-            print(f"{user_name} It's a tie!!!\n")
+            print(f"{user_name}, It's a tie!!!\n")
             ties += 1
         elif computer == 2:  # comp beats user
             print(f"{user_name}... You lost..... try again! lol\n")
             losses += 1
         elif computer == 3:  # user beats comp
-            print(f"{user_name}  You're the Winner!! \n")
+            print(f"{user_name},  You're the Winner!! \n")
             wins += 1
     # user chooses paper
     elif user == '2':
@@ -54,7 +54,7 @@ while not user == '9':
         print(f"\nThe Computer picked {computer}\n")
         time.sleep(2)
         if computer == 1:  # comp beats user
-            print("You lost... Loser.. try again! lol\n")
+            print(f"{user_name}, You lost... Loser.. try again! lol\n")
             losses += 1
         elif computer == 2:  # user beats comp
             print("You're the Winner!! \n")
