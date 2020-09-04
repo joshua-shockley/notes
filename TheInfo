@@ -1,3 +1,0 @@
-function hello(){
-consol.log("Hey, Man!")
-}
