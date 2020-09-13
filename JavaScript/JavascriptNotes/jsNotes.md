@@ -43,7 +43,65 @@ problem - works like let so isn't initialized and creates a reference error
 
 let talk about what a function is and the ways to write them
 
+1. function declaration:
+    made of function keyword followed by an obligatory function name, a list of params inside of parenthesis () and a pair of curly braces {} that delimits the body code... or in lamens terms is the part that holds how the damn thing works and what it returns
+    ex:  function fnName(paramName){ 
+        //does things with paramName then
+        return  thingsParamNameAnswer;
+    }
+then is invoked by doing:   fnName(paramName);
 
+2. function expression:
+    determined by a function keyword followdd by and optional function name, list of params in () and then the {} that delimits the body code just like the before mentioned.
+    ex: const count = function(array){
+        return array.length;
+    }
+    ex2: const methods= {
+    numbers: [1,5,8],
+    sum: function(){
+        return this.numbers.reduce(function(acc,num){
+        return acc + num;
+        });
+    }
+    }
+
+    now using them
+    count([5,7,8]); //answer is 3
+    methods.sum(); // answer to this one is 14
+
+3.Shorthand method:
+    definition can be used in a method declaration on ogject literals and es5 classes. can define using a function name followed by the  list of params in () and then the curly braces {} that again delimits the body statements
+
+    ex: const collection = {
+        items:[],
+        add(...items){
+            this.items.push(...items);
+        },
+        get(index){
+            return this.items[index];
+        }
+    };
+    now using them
+    collection.add("c", "java", "php");
+    collenction.get(1)  //asnwer is "java" you know since arrays are zero indexed...
+
+4. Arrow functions:
+    is defined using a pair of () that contains the params followed by a fat arrow => and then {} that then delimits the body statement...
+    ex: const absValue = (number) => {
+        if (number < 0){
+            return -number;
+            // this returns the number multiplied by -1 making it then positive number
+        }
+        //outside the if returns the number since its positive already
+        return number;
+    }
+    now using it
+    absValue(-10); // answer is 10
+    absValue(5);  // answer is 5
+
+5.using good examples from https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/ to get specific and great info on explaining this info.. will be paraphrasing as well as taking exact examples from the article... will site once done here
+
+6.
 lets talk about Objects
 
 lets talk about arrays
