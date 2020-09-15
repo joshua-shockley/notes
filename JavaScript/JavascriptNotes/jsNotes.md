@@ -43,6 +43,11 @@ problem - works like let so isn't initialized and creates a reference error
 
 let talk about what a function is and the ways to write them
 
+####  using good examples from https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/ 
+####   to get specific and great info on explaining this info.. 
+####   will be paraphrasing as well as taking exact examples from the article...
+
+
 1. function declaration:
     made of function keyword followed by an obligatory function name, a list of params inside of parenthesis () and a pair of curly braces {} that delimits the body code... or in lamens terms is the part that holds how the damn thing works and what it returns
     ex:  function fnName(paramName){ 
@@ -99,9 +104,52 @@ then is invoked by doing:   fnName(paramName);
     absValue(-10); // answer is 10
     absValue(5);  // answer is 5
 
-5.using good examples from https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/ to get specific and great info on explaining this info.. will be paraphrasing as well as taking exact examples from the article... will site once done here
+5. (never heard of this before) Generator function:
+    this type actually returns a Generator object... 
+    similar to  functional expression, declaration or method declaration, just that is requires a star character(*).
+    so now the example to make more sense of this
+    ex: function* indexGenerator(){
+        var index = 0;
+        while(true){
+            yield index++;
+        }
+    };
+    now using it
+    const g = indexGenerator();
+    console.log(g.next().value); // answer 0
+    console.log(g.next().value); //answer 1
 
-6.
+    THERE ARE OTHER WAYS TO WRITE THIS ALSO INCLUDING WITHOUT THE NAME AND AS AN OBJECT METHOD SEE THE SITE FOR MORE INFO  https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/
+
+
+6. (and another that i'm not too familiar with using) New Function:
+    in js functions are first class objects- a function is a regular object of type function.... let's just get striaght to the example to make more sense of that
+
+    ex:  function sum1(a,b){
+        return a + b;
+    }
+    const sum2 = function(a,b){
+        return a + b;
+    }
+    const sum3 = (a,b) => a + b;  //this is an arrow function and doesnt need the brackets
+                                  //the return is setup from the fat arrow
+    console.log(typeof sum1 === 'function'); //true
+    console.log(typeof sum2 === 'function'); //true
+    console.log(typeof sum3 === 'function'); //true
+
+    since this is an object type is has a constructor: Function
+    below is an example as to the usage of the (new) keyword for the Function object class
+    and will show the usage as to how this works
+
+    const numberA = "numberA", numberB = "numberB"; // this sets two constants at once
+    const sumFunction = new Function(numberA, numberB,'return numberA + numberB);
+    now lets use it
+    sumFunction(10,15) // answer 25 - weird right how that works
+    
+    for more on this subject I would reference the following https://dmitripavlutin.com/6-ways-to-declare-javascript-functions/
+
+##### SO WITH SEING ALL THOSE WAYS TO CREATE FUNCTIONS GO PLAY AND MAKE SOME
+
 lets talk about Objects
 
 lets talk about arrays
