@@ -150,6 +150,40 @@ then is invoked by doing:   fnName(paramName);
 
 ##### SO WITH SEING ALL THOSE WAYS TO CREATE FUNCTIONS GO PLAY AND MAKE SOME
 
+lets talk about classes
+
+Class objects:
+    they are simple to make and then also to add properties and methods are a simple pattern. to add them in after the fact is also fairly simple
+    
+    lets make a simple class right quick
+
+
+    class Car {
+        //inside the constructor we make our properties
+        constructor(make,model,doors,color){
+            this.carMake = make;
+            this.carModel = model;
+            this.carDoors = doors;
+            this.carColor = color;
+
+        }
+        //outside of the constructor we make our methods
+        type(){
+            return "I have a " + this.carDoors + " door"+ ", " + this.carColor + ", "+ this.carMake + " " + this.carModel;
+        }
+    }
+    
+    //again this is just a simple Class for car... 
+    //this could also be a better example if it was vehicle then we could 
+    //look at how to pass methods and properties by inheritance from other classes
+
+        //anyway lets look at how to implement this now
+        let mycar = new Car("jeep", "wrangler", "4", "mango tango pearl");
+        console.log(mycar.type()) // console will output- "I have a 4 door, mango tango pearl, jeep wrangler"
+
+    AT A LATER TIME I'LL ATTACH A LINK OR JUST PUT IN A FILE NAME HERE FOR A BETTER EXAMPLE
+
+
 lets talk about Objects
 
 lets talk about arrays
