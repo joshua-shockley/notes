@@ -305,5 +305,44 @@ function rotLeft(a, d) {//a is array of ints, d is how many times to move
 
 
 ////
+// this one is really easy
+// Given an array of integers, find the sum of its elements.
+
+// For example, if the array  ar = [1,2,3], so return 6.
+
+// Function Description
+
+// Complete the simpleArraySum function in the editor below. It must return the sum of the array elements as an integer.
+
+// simpleArraySum has the following parameter(s):
+
+// ar: an array of integers
+function simpleArraySum(ar) {
+    let array = ar;
+    let theSum = 0;
+    for (let i = 0; i < array.length; i++) {
+        theSum = theSum + array[i];
+    }
+    console.log(theSum);
+    return theSum;
 
 
+}
+
+
+// another easier one
+// compare the values in the two arrays for points
+// return the score as a 2
+function compareTriplets(a, b) {
+    let score = [0, 0];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b[i]) {
+            score[0]++;
+        }
+        else if (a[i] !== b[i]) {
+            score[1]++;
+        }
+    }
+    return score;
+
+}
